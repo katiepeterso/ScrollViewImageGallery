@@ -8,7 +8,12 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIScrollViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIScrollView *imageGalleryView;
+@property (strong, nonatomic) IBOutlet UIImageView *image1;
+@property (strong, nonatomic) IBOutlet UIImageView *image2;
+@property (strong, nonatomic) IBOutlet UIImageView *image3;
 
 @end
 
@@ -17,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.image1.image = [UIImage imageNamed:@"Lighthouse-in-Field"];
+    self.image2.image = [UIImage imageNamed:@"Lighthouse-night"];
+    self.image3.image = [UIImage imageNamed:@"Lighthouse"];
+    self.imageGalleryView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 }
 
 - (void)didReceiveMemoryWarning {
