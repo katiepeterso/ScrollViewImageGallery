@@ -14,6 +14,7 @@
 		AA02360D1B9E1F6700AEA737 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA02360C1B9E1F6700AEA737 /* Images.xcassets */; };
 		AA0236101B9E1F6700AEA737 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA02360E1B9E1F6700AEA737 /* LaunchScreen.xib */; };
 		AA02361C1B9E1F6700AEA737 /* ScrollViewImageGalleriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA02361B1B9E1F6700AEA737 /* ScrollViewImageGalleriesTests.m */; };
+		AA0236621B9E56B800AEA737 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0236611B9E56B800AEA737 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		AA0236151B9E1F6700AEA737 /* ScrollViewImageGalleriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewImageGalleriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA02361A1B9E1F6700AEA737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA02361B1B9E1F6700AEA737 /* ScrollViewImageGalleriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewImageGalleriesTests.m; sourceTree = "<group>"; };
+		AA0236601B9E56B800AEA737 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		AA0236611B9E56B800AEA737 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				AA0236031B9E1F6700AEA737 /* AppDelegate.h */,
 				AA0236041B9E1F6700AEA737 /* AppDelegate.m */,
+				AA0236601B9E56B800AEA737 /* DetailViewController.h */,
+				AA0236611B9E56B800AEA737 /* DetailViewController.m */,
 				AA0236061B9E1F6700AEA737 /* ViewController.h */,
 				AA0236071B9E1F6700AEA737 /* ViewController.m */,
 				AA0236091B9E1F6700AEA737 /* Main.storyboard */,
@@ -222,6 +227,7 @@
 				AA0236081B9E1F6700AEA737 /* ViewController.m in Sources */,
 				AA0236051B9E1F6700AEA737 /* AppDelegate.m in Sources */,
 				AA0236021B9E1F6700AEA737 /* main.m in Sources */,
+				AA0236621B9E56B800AEA737 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
