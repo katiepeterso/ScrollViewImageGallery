@@ -23,9 +23,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.image1.image = [UIImage imageNamed:@"Lighthouse-in-Field"];
+    
     self.image2.image = [UIImage imageNamed:@"Lighthouse-night"];
+    
     self.image3.image = [UIImage imageNamed:@"Lighthouse"];
-    self.imageGalleryView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
 }
 
 - (void)didReceiveMemoryWarning {

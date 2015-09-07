@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="nV3-rQ-JEH"/>
+                        <viewControllerLayoutGuide type="bottom" id="1hf-Ii-MbP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -19,24 +19,25 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Yk-1D-1Ly">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0No-dU-EpR">
-                                        <rect key="frame" x="8" y="236" width="199" height="141"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0No-dU-EpR">
+                                        <rect key="frame" x="86" y="166" width="514" height="434"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccM-MG-ewK">
-                                        <rect key="frame" x="404" y="236" width="188" height="141"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccM-MG-ewK">
+                                        <rect key="frame" x="261" y="0.0" width="609" height="606"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-qL-mBC">
-                                        <rect key="frame" x="205" y="236" width="199" height="141"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-qL-mBC">
+                                        <rect key="frame" x="210" y="145" width="507" height="455"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8Yk-1D-1Ly" secondAttribute="bottom" id="WIQ-cl-jjx"/>
-                            <constraint firstItem="8Yk-1D-1Ly" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="kqa-Hn-gSt"/>
-                            <constraint firstItem="8Yk-1D-1Ly" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="rXw-hV-qGJ"/>
-                            <constraint firstAttribute="trailing" secondItem="8Yk-1D-1Ly" secondAttribute="trailing" id="uix-yC-taJ"/>
+                            <constraint firstItem="8Yk-1D-1Ly" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="PCC-UV-TT7"/>
+                            <constraint firstAttribute="trailing" secondItem="8Yk-1D-1Ly" secondAttribute="trailing" id="S7Z-ln-B4f"/>
+                            <constraint firstItem="1hf-Ii-MbP" firstAttribute="top" secondItem="8Yk-1D-1Ly" secondAttribute="bottom" id="dPf-0R-5mk"/>
+                            <constraint firstItem="8Yk-1D-1Ly" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="pDa-pg-DcZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -48,6 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="376" y="311"/>
         </scene>
     </scenes>
 </document>
