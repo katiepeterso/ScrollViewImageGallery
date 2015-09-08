@@ -11,15 +11,20 @@
 @interface DetailViewController ()<UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *detailScrollView;
-@property (strong, nonatomic) IBOutlet UIImageView *detailImage;
+@property (strong, nonatomic) IBOutlet UIImageView *detailImageView;
 
 @end
 
 @implementation DetailViewController
 
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return self.detailImageView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.detailImageView.image = self.imageFromMainVC;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,16 +34,12 @@
 
 -(void)zoomIntoScrollView {
     
-    
     self.detailScrollView.minimumZoomScale = 1.0;
     self.detailScrollView.maximumZoomScale = 4.0;
     self.detailScrollView.zoomScale = 1.0;
 }
 
 
--(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
-    return self.detailImage;
-}
 
 
 /*
