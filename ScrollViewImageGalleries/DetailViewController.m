@@ -25,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.detailImageView.image = self.imageFromMainVC;
+    [self zoomIntoScrollView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +35,7 @@
 
 -(void)zoomIntoScrollView {
     
-    self.detailScrollView.minimumZoomScale = 1.0;
+    self.detailScrollView.minimumZoomScale = 0.25;
     self.detailScrollView.maximumZoomScale = 4.0;
     self.detailScrollView.zoomScale = 1.0;
 }

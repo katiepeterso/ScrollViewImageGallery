@@ -20,7 +20,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAK-zR-NQi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZu-UR-GSt">
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZu-UR-GSt">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                 </subviews>
@@ -30,6 +30,9 @@
                                     <constraint firstItem="jZu-UR-GSt" firstAttribute="top" secondItem="CAK-zR-NQi" secondAttribute="top" id="MiL-bQ-3K5"/>
                                     <constraint firstAttribute="bottom" secondItem="jZu-UR-GSt" secondAttribute="bottom" id="sdT-4f-nym"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="zjy-wf-0NC" id="XaO-39-yhZ"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,7 +55,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nV3-rQ-JEH"/>
                         <viewControllerLayoutGuide type="bottom" id="1hf-Ii-MbP"/>
@@ -61,6 +64,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-Lx-KZe">
+                                <rect key="frame" x="280" y="563" width="39" height="37"/>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Yk-1D-1Ly">
                                 <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <subviews>
@@ -74,9 +80,6 @@
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0No-dU-EpR">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="600"/>
                                     </imageView>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-Lx-KZe">
-                                        <rect key="frame" x="281" y="563" width="39" height="37"/>
-                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -84,13 +87,11 @@
                                     <constraint firstItem="gHh-qL-mBC" firstAttribute="height" secondItem="0No-dU-EpR" secondAttribute="height" id="1yO-XX-kfC"/>
                                     <constraint firstItem="gHh-qL-mBC" firstAttribute="width" secondItem="0No-dU-EpR" secondAttribute="width" id="5GI-jZ-fxw"/>
                                     <constraint firstAttribute="height" secondItem="0No-dU-EpR" secondAttribute="height" id="5VR-7n-9Rs"/>
-                                    <constraint firstAttribute="bottom" secondItem="2dO-Lx-KZe" secondAttribute="bottom" id="5jI-yf-LYJ"/>
                                     <constraint firstItem="gHh-qL-mBC" firstAttribute="leading" secondItem="0No-dU-EpR" secondAttribute="trailing" id="6GU-Er-ZtY"/>
                                     <constraint firstItem="0No-dU-EpR" firstAttribute="leading" secondItem="8Yk-1D-1Ly" secondAttribute="leading" id="8l4-5Z-ev9"/>
                                     <constraint firstItem="gHh-qL-mBC" firstAttribute="width" secondItem="ccM-MG-ewK" secondAttribute="width" id="9ta-E0-xgB"/>
                                     <constraint firstItem="ccM-MG-ewK" firstAttribute="top" secondItem="8Yk-1D-1Ly" secondAttribute="top" id="CDZ-Kg-Bwt"/>
                                     <constraint firstAttribute="trailing" secondItem="ccM-MG-ewK" secondAttribute="trailing" id="E1x-N9-4Zg"/>
-                                    <constraint firstAttribute="centerX" secondItem="2dO-Lx-KZe" secondAttribute="centerX" id="NSZ-ue-e9H"/>
                                     <constraint firstItem="gHh-qL-mBC" firstAttribute="top" secondItem="8Yk-1D-1Ly" secondAttribute="top" id="SxV-7d-Fvt"/>
                                     <constraint firstItem="0No-dU-EpR" firstAttribute="top" secondItem="8Yk-1D-1Ly" secondAttribute="top" id="bUh-H9-LXZ"/>
                                     <constraint firstItem="gHh-qL-mBC" firstAttribute="height" secondItem="ccM-MG-ewK" secondAttribute="height" id="e7q-dy-mCk"/>
@@ -99,6 +100,7 @@
                                     <constraint firstAttribute="width" secondItem="0No-dU-EpR" secondAttribute="width" id="x2K-nU-fxQ"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="l6z-fN-RBb"/>
                                     <outletCollection property="gestureRecognizers" destination="gA7-th-AaV" appends="YES" id="dHI-mu-VzZ"/>
                                 </connections>
                             </scrollView>
@@ -106,6 +108,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Yk-1D-1Ly" firstAttribute="top" secondItem="nV3-rQ-JEH" secondAttribute="bottom" constant="-20" id="2xn-ue-4Fo"/>
+                            <constraint firstItem="1hf-Ii-MbP" firstAttribute="top" secondItem="2dO-Lx-KZe" secondAttribute="bottom" id="MX3-6y-K8c"/>
+                            <constraint firstAttribute="centerX" secondItem="2dO-Lx-KZe" secondAttribute="centerX" id="RWe-6i-1vg"/>
                             <constraint firstItem="8Yk-1D-1Ly" firstAttribute="bottom" secondItem="1hf-Ii-MbP" secondAttribute="top" id="Zsk-bi-ZTM"/>
                             <constraint firstItem="8Yk-1D-1Ly" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="fn8-Q4-OXu"/>
                             <constraint firstAttribute="trailing" secondItem="8Yk-1D-1Ly" secondAttribute="trailing" id="gqD-Df-9pG"/>
@@ -117,6 +121,7 @@
                         <outlet property="image2" destination="gHh-qL-mBC" id="OXJ-yS-Se3"/>
                         <outlet property="image3" destination="ccM-MG-ewK" id="EJM-D4-XJ2"/>
                         <outlet property="imageGalleryView" destination="8Yk-1D-1Ly" id="MPU-oD-MmS"/>
+                        <outlet property="imagePageNumber" destination="2dO-Lx-KZe" id="8ou-LS-iM5"/>
                         <segue destination="zjy-wf-0NC" kind="show" identifier="showImageDetail" id="Uja-cu-TuX"/>
                     </connections>
                 </viewController>

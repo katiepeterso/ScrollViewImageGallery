@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *image2;
 @property (strong, nonatomic) IBOutlet UIImageView *image3;
 @property (strong, nonatomic) NSArray *imageArray;
+@property (strong, nonatomic) IBOutlet UIPageControl *imagePageNumber;
 
 @end
 
@@ -29,6 +30,7 @@
     self.image2.image = [UIImage imageNamed:@"Lighthouse-night"];
     self.image3.image = [UIImage imageNamed:@"Lighthouse"];
     self.imageArray = @[self.image1.image, self.image2.image, self.image3.image];
+    [self.view bringSubviewToFront:self.imagePageNumber];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,8 +50,10 @@
         DetailViewController *newImageDetailVC = segue.destinationViewController;
         newImageDetailVC.imageFromMainVC = sender;
     }
-    
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.imagePageNumber.currentPage = scrollView.contentOffset.x/scrollView.frame.size.width;
+}
 
 @end
